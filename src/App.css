@@ -29,6 +29,14 @@
   color: #61dafb;
 }
 
+.button {
+  background-color: #198754;
+  border-color: #198754;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
