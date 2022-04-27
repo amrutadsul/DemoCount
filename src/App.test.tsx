@@ -1,9 +1,13 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('Should show count button', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  
+  const createButton = screen.getByRole('button', { name: /count/i })
+
+  expect(createButton).toBeInTheDocument()
+  expect(createButton.textContent).toBe('Count')
+  fireEvent.click(createButton)
 });
